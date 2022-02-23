@@ -38,32 +38,32 @@
             <div class="form">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="name" placeholder="Incluir nome e sobrenome" />
+                    <input type="text" class="form-control" id="name" pattern=".{1,} .{1,}" placeholder="Incluir nome e sobrenome" />
                 </div>
 
                 <div class="mb-3">
                     <label for="phone" class="form-label">Telefone</label>
-                    <input type="text" class="form-control" id="phone" placeholder="(99) 99999-9999" />
+                    <input type="text" class="form-control" id="phone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(99) 99999-9999" />
                 </div>
 
                 <div class="mb-3">
                     <label for="type" class="form-label">Tipos de atendimento</label>
-                    <input type="text" class="form-control" id="type" placeholder="Informe o tipo principal primeiro seguidos pelos demais"/>
+                    <input type="text" class="form-control" id="type" pattern="[^0-9]{3,}" placeholder="Informe o tipo principal primeiro seguidos pelos demais"/>
                 </div>
 
                 <div class="mb-3">
                     <label for="document" class="form-label">CPF ou CNPJ</label>
-                    <input type="text" class="form-control" id="document" placeholder="999.999.999-99 ou 99.999.999/9999-99" />
+                    <input type="text" class="form-control" id="document" pattern="([0-9]{3}\.[0-9]{3}\.[0-9]{3}|[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4})-[0-9]{2}" placeholder="999.999.999-99 ou 99.999.999/9999-99" />
                 </div>
 
                 <div class="mb-3">
                     <label for="equipament" class="form-label">Aparelho</label>
-                    <input type="text" class="form-control" id="equipament" placeholder="Apenas 'Samsung' ou 'Motorola' e inclua o modelo se puder"/>
+                    <input type="text" class="form-control" id="equipament" pattern=".{0,}\b([Ss][Aa][Mm][Ss][Uu][Nn][Gg]|[Mm][Oo][Tt][Oo][Rr][Oo][Ll][Aa])\b.{0,}" placeholder="Apenas 'Samsung' ou 'Motorola' e inclua o modelo se puder"/>
                 </div>
 
                 <div class="mb-3">
                     <label for="date" class="form-label">Data</label>
-                    <input type="text" class="form-control" id="date" placeholder="dd/mm/aaaa ou dd-mm-aaaa" />
+                    <input type="text" class="form-control" id="date" pattern="[0-9]{2}([/-])[0-9]{2}\1[0-9]{4}" placeholder="dd/mm/aaaa ou dd-mm-aaaa" />
                 </div>
             </div>
 
