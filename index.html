@@ -108,15 +108,17 @@
         }
 
         function showPhone(value) {
-            return value;
+            return value.replace(/[0-9](?=[0-9\-])(?![0-9]\)|[0-9]$)/g, '*');
         }
 
         function showType(value) {
-            return value;
+            const regex = /.{1,}?(?=[ $])/.exec(value.trim());
+
+            return regex ? regex[0] : '';
         }
 
         function showDocument(value) {
-            return value;
+            return value.replace(/(?<!^)(?<=\.)[0-9]{3}/g, '***');
         }
 
         function showEquipament(value) {
